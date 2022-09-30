@@ -15,9 +15,6 @@ int main()
     std::cout << "there are " << deck.remaining() << " cards remaining" << std::endl;
 
     deal_hand(deck, 9);
-    deal_hand(deck, 5);
-    deal_hand(deck, 13);
-    deal_hand(deck, 10);
 
     std::cout << "there are " << deck.remaining() << " cards remaining" << std::endl;
     return 0;

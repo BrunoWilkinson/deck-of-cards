@@ -10,7 +10,7 @@ const short int cards_per_suit = deck_size_num / num_of_suits;
 std::vector<Card> create_suit(Suit suit)
 {
     std::vector<Card> output;
-    for (int i = 1; i < cards_per_suit; ++i)
+    for (int i = 1; i <= cards_per_suit; ++i)
     {
         Card card { suit, (Rank)i };
         output.push_back(card);
@@ -20,7 +20,7 @@ std::vector<Card> create_suit(Suit suit)
 
 Deck::Deck()
 {
-    for (int i = 0; i < num_of_suits; ++i)
+    for (int i = 0; i <= num_of_suits; ++i)
     {
         switch (i)
         {
@@ -66,7 +66,9 @@ void Deck::set_cards(std::vector<Card> new_cards)
 
 const Card& Deck::deal_card()
 {
-    return cards.at(0);
+    const Card& card = cards.front();
+    cards.erase(cards.begin());
+    return card;
 }
 
 std::size_t Deck::remaining()

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <card.h>
+#include "card.h"
 
 const std::string ace_str = "Ace";
 const std::string jack_str = "Jack";
