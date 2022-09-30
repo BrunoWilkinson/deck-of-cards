@@ -7,7 +7,7 @@ class Card;
 
 class Deck {
 public:
-    Deck();
+    Deck(int n = 1);
     Deck(const Deck& deck) : cards(deck.cards) {};
     ~Deck();
     std::vector<Card> get_cards() const { return cards; }

@@ -19,31 +19,34 @@ std::vector<Card> create_suit(Suit suit)
     return output;
 }
 
-Deck::Deck()
+Deck::Deck(int n)
 {
-    for (int i = 0; i <= num_of_suits; ++i)
+    for (int i = 0; i <= n; ++i)
     {
-        switch (i)
+        for (int i = 0; i <= num_of_suits; ++i)
         {
-            case SPADES: {
-                std::vector<Card> suit_of_card = create_suit(SPADES);
-                cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
-                break;
-            }
-            case HEARTS: {
-                std::vector<Card> suit_of_card = create_suit(HEARTS);
-                cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
-                break;
-            }
-            case DIAMONDS: {
-                std::vector<Card> suit_of_card = create_suit(DIAMONDS);
-                cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
-                break;
-            }
-            case CLUBS: {
-                std::vector<Card> suit_of_card = create_suit(CLUBS);
-                cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
-                break;
+            switch (i)
+            {
+                case SPADES: {
+                    std::vector<Card> suit_of_card = create_suit(SPADES);
+                    cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
+                    break;
+                }
+                case HEARTS: {
+                    std::vector<Card> suit_of_card = create_suit(HEARTS);
+                    cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
+                    break;
+                }
+                case DIAMONDS: {
+                    std::vector<Card> suit_of_card = create_suit(DIAMONDS);
+                    cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
+                    break;
+                }
+                case CLUBS: {
+                    std::vector<Card> suit_of_card = create_suit(CLUBS);
+                    cards.insert(cards.end(), suit_of_card.begin(), suit_of_card.end());
+                    break;
+                }
             }
         }
     }
