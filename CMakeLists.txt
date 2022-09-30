@@ -23,7 +23,7 @@ project(
 # Other common choices are STATIC, SHARED, and MODULE
 # Including header files here helps IDEs but is not required.
 # Output libname matches target name, with the usual extensions on your system
-add_library(MyLib src/card.cpp  src/card.h  src/deck.cpp src/deck.h)
+add_library(MyLib src/card.cpp  src/card.h  src/deck.cpp src/deck.h src/exception.h)
 
 # Link each target with other targets or add options, etc.
 
