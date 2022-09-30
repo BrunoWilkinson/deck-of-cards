@@ -45,7 +45,7 @@ void Card::print()
             std::cout << king_str << " of ";
             break;
         default:
-            std::cout << rank << " of ";
+            std::cout << (int)rank << " of ";
             break;
     }
     switch (suit)

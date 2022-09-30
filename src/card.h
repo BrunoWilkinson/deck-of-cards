@@ -10,7 +10,16 @@ enum Suit {
 
 enum Rank {
     ACE = 1,
-    JACK = 11,
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN,
+    EIGHT,
+    NINE,
+    TEN,
+    JACK,
     QUEEN,
     KING
 };
