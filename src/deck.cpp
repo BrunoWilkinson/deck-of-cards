@@ -2,6 +2,7 @@
 #include <random>
 #include "deck.h"
 #include "card.h"
+#include "exception.h"
 
 const short int deck_size_num = 52;
 const short int num_of_suits = deck_size_num / 13;
@@ -66,6 +67,7 @@ void Deck::set_cards(std::vector<Card> new_cards)
 
 const Card& Deck::deal_card()
 {
+    if (cards.size() == 0) throw E("Deck: cannot deal from empty deck");
     const Card& card = cards.front();
     cards.erase(cards.begin());
     return card;
